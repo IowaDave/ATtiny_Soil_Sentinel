@@ -61,4 +61,8 @@ Combining power-down sleep with the Watchdog Timer and its ISR replaces the  ```
 
 The ISR code appears lengthy at first glance. However, most of the code gets skipped over during any, single pass through the procedure. This is because it is organized into two so-called Finite State Machines, implemented as ```switch()``` statements. State machines are very fast ways to select which portion of a code listing will be processed. Further, these state machines are entirely skipped over most of the time; they run only when the value of a countdown timer reaches zero. As a result, each pass through the ISR may involve as many as nine or ten instructions, or as few as four.
 
+Note that the ISR code module file name suffix is ".c" rather than ".cpp".  The reason for naming it this way is to invoke the C compiler rather than the C++ compiler for this part. It turns out that "ISR" is a C-style macro that carries special meaning all the way down deep into the Assembler and Linker stages of the Arduino IDE. It will not compile as part of a ".cpp" file. 
+
+Notice also that the ```#include``` directive for this file appears at the end of the ATtiny_Soil_Sentinel.ino listing. For reasons I do not understand, but believe to be true, Arduino IDE prefers to encounter interrupt service routines only at the end of its main ".ino" file rather than higher up where ```#include``` directives normally go. Placing ```#include wdtisr.c``` at the end of the ".ino" file keeps things tidy. It brings the ISR in at the right place while allowing me to write the ISR code in a separate, library file.
+
 ### Connecting and Calibrating
