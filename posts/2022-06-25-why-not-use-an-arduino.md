@@ -6,4 +6,4 @@ I saw four reasons to use an AVR microcontroller, rather than full-featured Ardu
 4. **Try something new**. Because I'm not getting any younger!
 
 ## Articles in this Series
-[Why Not Use an Arduino?](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/gh-pages/posts/2022-06-25-why-not-use-an-arduino.md) **<< You are Here 
+[Why Not Use an Arduino?](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/gh-pages/posts/2022-06-25-why-not-use-an-arduino.md) **<< You are Here**
