@@ -1,4 +1,4 @@
-#Why Not Use an Arduino?
+# Why Not Use an Arduino?
 I saw four reasons to use an AVR microcontroller, rather than full-featured Arduino development board.
 1. **Cost**. A microcontroller chip typically costs less to buy compared to an Arduino.
 2. **Size**. A chip takes up less space than an Arduino. Some AVR chips are *really* tiny, yet do the job.
