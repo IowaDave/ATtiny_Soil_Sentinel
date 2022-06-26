@@ -7,3 +7,5 @@ I wondered: how much would I have to learn to do the same project with only a &l
 
 A lot, as it turned out. Now I'm writing it up. You can read the following articles in any order you choose:
 
+## Articles in this Series
+[Why Not Use an Arduino?](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/gh-pages/posts/2022-06-25-why-not-use-an-arduino.md)
