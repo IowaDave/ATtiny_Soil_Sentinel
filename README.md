@@ -12,11 +12,7 @@ The project also presents useful techniques for:
 * waterproofing the sensor, and
 * soldering the project onto perfboard.
 
-For my friends who have received one my perfboard models, I provide the following:
-
-[bar]: (https://github.com/IowaDave/ATtiny_Soil_Sentinel/edit/main/README.md#connecting-and-calibrating)
-
-[Instructions for hooking it up and calibrating it] [bar]
+For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it]{#Connecting-and-Calibrating).
 
 
 A breadboard version will be built first, because it's traditional.
