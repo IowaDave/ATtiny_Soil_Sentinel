@@ -16,7 +16,7 @@ For my friends who have received one my perfboard models, I provide the followin
 
 [bar]: (https://github.com/IowaDave/ATtiny_Soil_Sentinel/edit/main/README.md#connecting-and-calibrating)
 
-[Instructions for hooking it up and calibrating it][bar]
+[Instructions for hooking it up and calibrating it] [bar]
 
 
 A breadboard version will be built first, because it's traditional.
