@@ -12,7 +12,7 @@ The project also presents useful techniques for:
 * waterproofing the sensor, and
 * soldering the project onto perfboard.
 
-For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it]{#Connecting-and-Calibrating).
+For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it](#Connecting-and-Calibrating).
 
 
 A breadboard version will be built first, because it's traditional.
