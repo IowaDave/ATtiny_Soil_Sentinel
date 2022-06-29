@@ -7,7 +7,9 @@ I saw four reasons to use an AVR microcontroller, rather than full-featured Ardu
 
 ## Articles in this Series
 [Home Page](https://iowadave.github.io/ATtiny_Soil_Sentinel/)
+
 Why Not Use an Arduino? **<< You are Here**
+
 [About the State Machines](https://iowadave.github.io/About_the_State_Machines)
 
 ## Why Not, Part One
