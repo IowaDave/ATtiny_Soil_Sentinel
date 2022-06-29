@@ -2,7 +2,9 @@
 Building a battery-operated, long-lived, soil moisture monitor on a tiny chip.
 
 ---
+
 For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it](#Connecting-and-Calibrating).
+
 ---
 It was time to cut the cord. Sons must leave their mothers. Likewise tinkerers, their Arduinos.
 
