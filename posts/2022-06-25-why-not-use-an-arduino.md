@@ -8,6 +8,7 @@ I saw four reasons to use an AVR microcontroller, rather than full-featured Ardu
 ## Articles in this Series
 [Home Page](https://iowadave.github.io/ATtiny_Soil_Sentinel/)
 Why Not Use an Arduino? **<< You are Here**
+[About the State Machines](https://iowadave.github.io/About_the_State_Machines)
 
 ## Why Not, Part One
 Arduino is much more than just a microcontroller chip. The chip is also known as a microprocessing unit, or MPU, and is just one component among many that crowd the surface of an Arduino.
