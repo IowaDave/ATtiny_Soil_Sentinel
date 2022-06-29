@@ -10,7 +10,7 @@ I saw four reasons to use an AVR microcontroller, rather than full-featured Ardu
 
 Why Not Use an Arduino? **<< You are Here**
 
-[About the State Machines](https://iowadave.github.io/ATtiny_Soil_Sentinel/2022-06-28-about-the-state-machines)
+[About the State Machines](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-28-about-the-state-machines)
 
 ## Why Not, Part One
 Arduino is much more than just a microcontroller chip. The chip is also known as a microprocessing unit, or MPU, and is just one component among many that crowd the surface of an Arduino.
