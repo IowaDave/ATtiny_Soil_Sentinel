@@ -1,6 +1,8 @@
 # ATtiny_Soil_Sentinel
 Building a battery-operated, long-lived, soil moisture monitor on a tiny chip.
 
+![Sentinel beta test version in operating mode](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/main/images/IMG_2848.jpg)
+
 ---
 
 For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it](#Connecting-and-Calibrating).
