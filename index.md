@@ -12,4 +12,4 @@ Home **<< you are here**
 
 [Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-25-why-not-use-an-arduino)
 
-[About the State Machines](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-28-About_the_State_Machines)
+[About the State Machines](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-28-about-the-state-machines)
