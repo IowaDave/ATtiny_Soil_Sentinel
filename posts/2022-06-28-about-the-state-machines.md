@@ -4,7 +4,7 @@ How the code knows what to do the next time the MCU wakes up
 ## Articles in This Series
 [Home Page](https://iowadave.github.io/ATtiny_Soil_Sentinel/)
 
-[Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/2022-06-25-why-not-use-an-arduino)
+[Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-25-why-not-use-an-arduino)
 
 [About the State Machines] **<< You are Here**
 
