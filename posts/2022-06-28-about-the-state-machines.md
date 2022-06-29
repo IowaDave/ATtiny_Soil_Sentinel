@@ -2,6 +2,12 @@
 How the code knows what to do the next time the MCU wakes up
 
 ## Articles in This Series
+[Home Page](https://iowadave.github.io/ATtiny_Soil_Sentinel/)
+
+[Why Not Use an Arduino?](https://iowadave.github.io/Why_Not_Use_an_Arduino)
+
+About the State Machines  **<< you are here**
+
 
 ## State Machines in the Code
 The watchdog timer wakes the MPU up at 1/4-second intervals. This event is due to a phenomenon built into the silicon of the chip: an interrupt. Each time the interrupt "fires", code execution jumps to an interrupt service routine, or ISR.
