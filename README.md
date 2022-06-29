@@ -110,8 +110,6 @@ Tightening the screws secures the wires in place against the top of the terminal
 
 Begin with soil that is about as dry as you care to allow for your plant. Insert the sensor into the soil, leaving about an inch of the sensor protruding above the soil surface.
 
-Locate the trim potentiometer, at the lower-left corner of the Sentinel image.
-
 **Step One** 
 
 Energize the Sentinel board. When power is first applied, the device enters Calibration Mode.
@@ -121,6 +119,8 @@ Note that the LED might start flashing, or it might remain off. You will observe
 The Sentinel will remain in Calibration Mode for about sixty seconds. You can start another Calibration any time you desire, by simply turning the power off then back on again.
 
 **Step Two**
+
+Locate the trim potentiometer, at the upper-right corner of the Sentinel image.
 
 With the Sentinel in Calibration Mode, use a small screwdriver to turn the trim potententiometer through its full arc of motion. At one extreme, the LED will flash steadily. At the other extreme, the LED will be turned off. Rotate the potentiometer from the "off" side back to the position where the LED just starts to flash. This position establishes the initial calibration point. In the next step, you will allow the Sentinel to enter Operating Mode. Then you will verify the calibration.
 
