@@ -8,4 +8,8 @@ I wondered: how much could I learn to do the same project with only a &ldquo;bar
 Now I'm writing it up. You can read the following articles in any order you choose:
 
 ## Articles in this Series
+Home **<< you are here**
+
 [Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-25-why-not-use-an-arduino)
+
+[About the State Machines](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-28-About_the_State_Machines)
