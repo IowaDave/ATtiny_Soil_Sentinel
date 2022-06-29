@@ -1,6 +1,9 @@
 # ATtiny_Soil_Sentinel
 Building a battery-operated, long-lived, soil moisture monitor on a tiny chip.
 
+---
+For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it](#Connecting-and-Calibrating).
+---
 It was time to cut the cord. Sons must leave their mothers. Likewise tinkerers, their Arduinos.
 
 The project presented here takes an old, familiar Arduino demonstration in new directions, including:
@@ -11,9 +14,6 @@ The project presented here takes an old, familiar Arduino demonstration in new d
 The project also presents useful techniques for:
 * waterproofing the sensor, and
 * soldering the project onto perfboard.
-
-For my friends who have received one my perfboard models, I provide [instructions for hooking it up and calibrating it](#Connecting-and-Calibrating).
-
 
 A breadboard version will be built first, because it's traditional.
 
@@ -108,7 +108,9 @@ Begin with soil that is about as dry as you care to allow for your plant. Insert
 
 Locate the trim potentiometer, at the lower-left corner of the Sentinel image.
 
-**Step One**: Energize the Sentinel board. When power is first applied, the device enters Calibration Mode.
+**Step One** 
+
+Energize the Sentinel board. When power is first applied, the device enters Calibration Mode.
 
 Note that the LED might start flashing, or it might remain off. You will observe both behaviors of the LED in the next step.
 
