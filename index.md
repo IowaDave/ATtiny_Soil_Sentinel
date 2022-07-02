@@ -12,9 +12,9 @@ Now I'm writing it up. You can read the following articles in any order you choo
   <li><h3>Home **<< you are here**</h3></li>  
   {% for post in site.posts %}
     <li>
-      <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.date }} : {{ post.title }}</a></h3>
+      <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h3>
     </li>
   {% endfor %}
 </ul>
 
-Added the date maybe?
+Format the date a little better maybe?
