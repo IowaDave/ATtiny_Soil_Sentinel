@@ -6,6 +6,15 @@ I saw four reasons to use an AVR microcontroller, rather than full-featured Ardu
 4. **Try something new**. Because I'm not getting any younger!
 
 ## Articles in this Series
+<ul>
+  <li><h5><a href="https://iowadave.github.io/ATtiny_Soil_Sentinel/">Home</a></h5></li>  
+  {% for post in site.posts %}
+    <li>
+      <h5><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h5>
+    </li>
+  {% endfor %}
+</ul>
+
 [Home Page](https://iowadave.github.io/ATtiny_Soil_Sentinel/)
 
 Why Not Use an Arduino? **<< You are Here**
