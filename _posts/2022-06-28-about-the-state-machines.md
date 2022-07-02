@@ -2,12 +2,14 @@
 How the code knows what to do the next time the MCU wakes up
 
 ## Articles in This Series
-[Home Page](https://iowadave.github.io/ATtiny_Soil_Sentinel/)
-
-[Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-25-why-not-use-an-arduino)
-
-[About the State Machines] **<< You are Here**
-
+<ul>
+  <li><h5><a href="https://iowadave.github.io/ATtiny_Soil_Sentinel/">Home</a></h5></li>  
+  {% for post in site.posts %}
+    <li>
+      <h5><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h5>
+    </li>
+  {% endfor %}
+</ul>
 
 
 ## State Machines in the Code
