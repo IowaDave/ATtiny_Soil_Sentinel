@@ -12,8 +12,8 @@ Now I'm writing it up. You can read the following articles in any order you choo
   <li><h3>Home **<< you are here**</h3></li>  
   {% for post in site.posts %}
     <li>
-      <!-- <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3> -->
-      <h3>[{{ post.title }}]({{site.baseurl}}{{ post.url }})</h3>
+      <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+      <!-- <h3>[{{ post.title }}]({{site.baseurl}}{{ post.url }})</h3> -->
     </li>
   {% endfor %}
 </ul>
