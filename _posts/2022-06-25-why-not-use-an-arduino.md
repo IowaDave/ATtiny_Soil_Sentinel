@@ -1,9 +1,14 @@
 # Why Not Use an Arduino?
-I saw four reasons to use an AVR microcontroller, rather than full-featured Arduino development board.
-1. **Cost**. A microcontroller chip typically costs less to buy compared to an Arduino.
-2. **Size**. A chip takes up less space than an Arduino. Some AVR chips are *really* tiny, yet do the job.
-3. **Energy savings**. Power-down sleep can cut a chip's battery drain almost to zero. An Arduino will continue to draw significant power even while the chip onboard of it is sleeping.
-4. **Try something new**. Because I'm not getting any younger!
+Arduino = a microprocessor chip (MPU) + a bunch of other hardware and software.
+
+Advantage of Arduino: they make it easy to access the MPU from a computer.
+
+Disadvantages of Arduino: 
+
+* They hide the MPU &mdash; one learns about the Arduino, instead.
+* Power consumption is greater for an Arduino compared to the MPU, alone.
+
+Real-life devices that need an MPU typically use only the MPU chip. I wanted to learn how that works.
 
 ## Articles in this Series
 <ul>
@@ -15,17 +20,58 @@ I saw four reasons to use an AVR microcontroller, rather than full-featured Ardu
   {% endfor %}
 </ul>
 
-## Why Not, Part One
-Arduino is much more than just a microcontroller chip. The chip is also known as a microprocessing unit, or MPU, and is just one component among many that crowd the surface of an Arduino.
+## Hardware
+Arduino surrounds a microcontroller chip with other components, including:
 
-MPU chips contain many components inside their tiny, plastic packages. You code can access and control the components by reading values from or writing to certain memory locations in the MPU. You can look up details about an MPU chip in its datasheet. These are available to download as PDF files. Datasheets can be anywhere from a few hundred pages to well over a thousand pages long.
+* pin headers,
+* USB hardware<sup>*</sup>,
+* assorted LEDs<sup>*</sup>,
+* voltage regulator<sup>*</sup>.
 
-Or you can save yourself the trouble, and just use "Arduino language" statements such as ```digitalRead()``` or ```Serial.print()```. The advantage of Arduino language is that you do never have to know how the MPU chip works. The disadvantage is that you never learn how the MPU chip works, either.
+<sup>*</sup>This hardware consumes power even when the MPU is sleeping.
 
-There, in a nutshell, is why I chose not to use an Arduino. I wanted to learn how an MPU chip works, then use one all by itself in a project.
+The Soil Sentinel has no use for any of that extra Arduino hardware. The project becomes physically smaller and uses less energy after taking the MPU off the Arduino.
 
-## Why Not, Part Two
-Face facts. Rarely does an Arduino project use all of the I/O pins on the board. Many Internet-of-Things (IoT) devices require very few I/O pins. The ATmega328P MPU on the Arduino Uno and Nano boards have 20 or more I/O pins
+## Software
+MPU chips typically embed a variety of useful peripherals within their tiny, plastic packages, including:
+
+* timers<sup>*</sup>,
+* I/O pins<sup>*</sup>,
+* PWM generators,
+* serial communications,
+* analog voltage comparator<sup>*</sup>,
+* analog-to-digital converter.
+
+<sup>*</sup>The Sentinel uses this peripheral.
+
+Access and control of the embedded peripherals is done by reading values from or writing to certain memory locations in the MPU. The memory locations have names. Details are provided in a &ldquo;data sheet&rdquo; for each type of MPU. These documents are available to download as PDF files. For example, the following C code statement writes a "1" to bit #2 of a memory register named PORTD:
+
+```PORTD |= (1<<PORTD2);```
+
+The data sheet explains what bit #2 of PORTD represents, and what happens when your code writes the value "1" to that bit. The learning takes a while. Data sheets can be anywhere from a few hundred pages to well over a thousand pages long.
+
+One can write code for Arduinos that way. However, most people don't. They use &ldquo;Arduino Language&rdquo; instead.
+
+Arduino language statements are defined in special libraries designed to make it look easier. Suppose bit #2 of PORTD refers to the physical pin labeled "2" on an Arduino. Then the following Arduino statement performs the same function as that shown above:
+
+```digitalWrite(2, HIGH);```
+
+The advantage of Arduino language is not having to know how the MPU chip works. Disadvantages include:
+
+* you also never learn how the MPU chip works, and
+* Arduino language does not come with conveniently pre-written statements to address some parts of the MPU, such as the analog comparator.
+
+In a nutshell, I chose to use just an MPU rather than an Arduino because:
+
+* smaller,;
+* less expensive,;
+* uses less energy; and
+* the Sentinel needs code to access registers directly on the MPU.
+
+Besides, most &ldquo;real&rdquo; MPU-controlled devices just use an MPU, not a whole Arduino. It would be fun to pretend to be inventing a real product.
 
 ## Good Books
+The following books really helped me to understand the distinction between an Arduino and an MPU.
+
+
 
