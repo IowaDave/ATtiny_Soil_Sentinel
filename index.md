@@ -9,12 +9,12 @@ Now I'm writing it up. You can read the following articles in any order you choo
 
 ## Articles in this Series
 <ul>
-  <li><h3>Home **<< you are here**</h3></li>  
+  <li><h4>Home **<< you are here**</h4></li>  
   {% for post in site.posts %}
     <li>
-      <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h3>
+      <h4><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h4>
     </li>
   {% endfor %}
 </ul>
 
-Format the date a little better maybe?
+Format the TOC as H4
