@@ -17,4 +17,4 @@ Now I'm writing it up. You can read the following articles in any order you choo
   {% endfor %}
 </ul>
 
-xyzzy
+Try thrice that trick on Thode
