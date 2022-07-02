@@ -11,9 +11,13 @@ How the code knows what to do the next time the MCU wakes up
   {% endfor %}
 </ul>
 
+## View the Code
+It might help to open the following web page in a separate window for viewing as you read this article:
+
+[Watchdog Timer Interrupt Service Routine](https://raw.githubusercontent.com/IowaDave/ATtiny_Soil_Sentinel/gh-pages/ATtiny_Soil_Sentinel/wdtisr.c)
 
 ## State Machines in the Code
-The watchdog timer wakes the MPU up at 1/4-second intervals. This event is due to a phenomenon built into the silicon of the chip: an interrupt. Each time the interrupt "fires", code execution jumps to an interrupt service routine, or ISR.
+The watchdog timer wakes the MPU up at 1/4-second intervals. It is able to do this thanks to a feature built into the silicon of the chip: an interrupt. Each time the interrupt "fires", code execution jumps to an interrupt service routine, or ISR. The Sentinel performs nearly all of its work in the ISR.
 
 The concepts of watchdog timer and ISRs belong in an article of their own and will not be discussed much more here. The main things to know about them are:
 
