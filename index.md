@@ -17,7 +17,3 @@ Now I'm writing it up. You can read the following articles in any order you choo
     </li>
   {% endfor %}
 </ul>
-
-[Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-25-why-not-use-an-arduino)
-
-[About the State Machines](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-28-about-the-state-machines)
