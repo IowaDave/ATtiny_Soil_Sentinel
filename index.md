@@ -28,7 +28,7 @@ The MPU compares the voltage from the trim pot with that from the sensor. Differ
 
 A user can gauge whether soil surrounding the sensor is moist or dry by observing the LED. 
 
-## Low Power for Long Bettery Life
+## Low Power for Longer Battery Life
 The circuit aims to minimize power consumption. 
 
 Power is supplied to the sensor and to the trim pot from an output pin of the MPU. The pin is turned on only briefly, long enough to take a reading, then turned off again. 
