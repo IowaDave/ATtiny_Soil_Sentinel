@@ -8,7 +8,15 @@ I wondered: how much could I learn to do the same project with only a &ldquo;bar
 Now I'm writing it up. You can read the following articles in any order you choose:
 
 ## Articles in this Series
-Home **<< you are here**
+<ul>
+  <li><h3>Home **<< you are here**</h3></li>  
+  {% for post in site.posts %}
+    <li>
+      <!-- <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3> -->
+      <h3>[{{ post.title }}]({{site.baseurl}}{{ post.url }})</h3>
+    </li>
+  {% endfor %}
+</ul>
 
 [Why Not Use an Arduino?](https://iowadave.github.io/ATtiny_Soil_Sentinel/posts/2022-06-25-why-not-use-an-arduino)
 
