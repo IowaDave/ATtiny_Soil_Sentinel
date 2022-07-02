@@ -63,15 +63,24 @@ The advantage of Arduino language is not having to know how the MPU chip works. 
 
 In a nutshell, I chose to use just an MPU rather than an Arduino because:
 
-* smaller,;
-* less expensive,;
+* smaller;
+* less expensive;
 * uses less energy; and
 * the Sentinel needs code to access registers directly on the MPU.
 
 Besides, most &ldquo;real&rdquo; MPU-controlled devices just use an MPU, not a whole Arduino. It would be fun to pretend to be inventing a real product.
 
-## Good Books
-The following books really helped me to understand the distinction between an Arduino and an MPU.
+## Books
+The following books really helped me to understand the distinction between an Arduino and an MPU, as well as the peripherals embedded inside the MPU and correct code writing techniques for accessing the peripherals through named memory registers.
 
+Tom Almy. *Far Inside the Arduino*. 2020. Published by the author.
+
+Norman Dunbar. *Arduino Software Internals*. 2020. Published by APRESS Media.
+
+Elliott Williams. *MAKE: AVR Programming*. 2014. Maker Media, Inc. San Francisco, USA.
+
+Arne Vidstrom. *Arduino Assembly Language Programming*. 2019. Vidstrom Labs, Karlstad, Sweden.
+
+Muhammad Ali Mazidi, Sarmad Naimi and Sepehr Naimi. *The AVR Microcontroller and Embedded Systems Using Assembly and C*. First edition. 2011-2017. Published by Mazidi and Naimi, previously published by Pearson Education, Inc.
 
 
