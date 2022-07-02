@@ -9,7 +9,6 @@ Now I'm writing it up. You can read the following articles in any order you choo
 
 ## Articles in this Series
 <ul>
-  <li><h5>Home << you are here</h5></li>  
   {% for post in site.posts %}
     <li>
       <h5><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h5>
