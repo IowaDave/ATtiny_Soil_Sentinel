@@ -7,6 +7,7 @@ I wondered: how much could I learn by doing the same project with only a &ldquo;
 
 Now I'm writing it up. You can read the following articles in any order you choose:
 
+<!-- Comment-out the following ------------
 ## Articles in this Series
 <ul>
   {% for post in site.posts %}
@@ -15,6 +16,9 @@ Now I'm writing it up. You can read the following articles in any order you choo
     </li>
   {% endfor %}
 </ul>
+------------------- end comment    -->
+Trying this new approach to listing the posts:
+{% include post_list.html %}
 
 ## Overview
 The project combines a microprocessor (MPU) with a capacitive soil sensor, a trim potentiometer and an LED. 
