@@ -49,16 +49,33 @@ Better yet, create a new home page file in the ```gh-pages``` branch. Write it i
 So far, so good, but how to add posts easily?
 
 #### Three Key Tricks for Blogs in a Project Repository
-**Trick #1**: Place blog post articles in a folder named ```_posts```.
+**Trick #1**: Place blog post articles in a folder named ```_posts```. Write them in
 
 **Trick #2**: Define a ```baseurl``` in the ```_config.yml``` file, like this:
 
 ```baseurl: /ATtiny_Soil_Sentinel```
 
-**Trick #3**: Put a Jekyll list-builder code block on every page. Mine looks something like the following.
+**Trick #3**: Include a code block on every page that lists the available blog articles. At the time of writing, mine looked something like the following.
 
+```html
 
-
-
+```
 
 ## Online references
+
+###### Github Pages
+
+
+###### Jekyll
+
+
+###### Liquid
+
+
+###### YAML
+
+
+###### SASS
+
+
+###### Markdown
