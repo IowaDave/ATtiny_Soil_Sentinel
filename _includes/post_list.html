@@ -2,7 +2,17 @@
 <ul>
   {% for post in site.posts %}
     <li>
-      <h5><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h5>
+      <h6>
+        <a href="{{site.baseurl}}{{ post.url }}"
+          {% if post.title == page.title %}
+             style="color: black;"
+          {% endif %}>
+          {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
+        </a>
+        {% if post.title == page.title %}
+          &nbsp; << You are here.
+        {% endif %}        
+      </h6>
     </li>
   {% endfor %}
 </ul>
