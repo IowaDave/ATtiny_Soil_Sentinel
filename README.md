@@ -52,6 +52,11 @@ The build illustrated here used an ATtiny2313V. It boasts a meagre 2K of flash m
 * A copy of the datasheet for the AVR chip being used.
     * example: [ATtiny2313 datasheet](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf)
 
+### Schematic
+I had fun drawing this diagram with Inkscape.
+
+![Schematic](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/main/images/schematic.png)
+
 ### Code
 The code for this project is contained in the folder, "ATtine_Soil_Sentinel". It comprises four code modules:
 * [ATtiny_Soil_Sentinel.ino](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/main/ATtiny_Soil_Sentinel/ATtiny_Soil_Sentinel.ino) performs one-time setup operations. Then, in the loop() section, all it does is to put the AVR chip into power-down sleep.
