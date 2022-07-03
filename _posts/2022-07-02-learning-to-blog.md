@@ -120,7 +120,13 @@ Jekyll and Liquid use YAML for the site configuration file and for page-specific
 
 <hr>
 
-###### SASS
+###### [SASS](https://sass-lang.com/)
+It's a kind of souped-up CSS for styling web pages. Github uses it, so I include a reference to it. However, I believe that ordinary CSS works perfectly well also.
+
+Note: Github will ignore any custom ```style``` tags or attributes you type directly into your page text. They have their reasons. Thankfully, they do allow you to create and use your own custom styling, if you wish. Follow Github's instructions for [Customizing your theme's CSS](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#customizing-your-themes-css).
+
+I link to this resource here for the sake of informational completeness. Editorial views expressed on their web site regarding topics other than technology are their own. I respect their sincerity while reserving my right to keep my own thoughts to myself.
 
 <hr>
-###### Markdown
+###### [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+Github Pages transforms Markdown text into html. So you don't have to.
