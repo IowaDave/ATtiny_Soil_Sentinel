@@ -79,20 +79,29 @@ So far, so good, but how to add posts easily?
 ```
 
 ## Online references
+The following links helped me to understand how Github does blogs.
+
+<hr>
 
 ###### Github Pages
 
+<hr>
 
 ###### [Jekyll](https://jekyllrb.com/docs/step-by-step/01-setup/)
 Here I've linked to the Step-by-Step Tutorial. The Jekyll site provides very nice navigation: lots of links on every page to other documentation and information.
 
-###### Liquid
+<hr>
 
+###### [Liquid](https://shopify.github.io/liquid/)
+Liquid calls itself a Template Language. I would say it fills some of the same rolein flow control (if-then, case-when) and iteration (e.g., for loops) that PHP performs in a server-side blog application such as WordPress.
+
+<hr>
 
 ###### YAML
 
+<hr>
 
 ###### SASS
 
-
+<hr>
 ###### Markdown
