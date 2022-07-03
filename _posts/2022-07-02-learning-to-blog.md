@@ -5,6 +5,8 @@ This post is organized in two parts:
 1. The parts (almost) no one told me.
 2. Links to some good information online.
 
+{% include post_list.html %}
+
 ## The Parts No One Told Me
 Including two sections:
 
