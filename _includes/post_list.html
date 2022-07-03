@@ -1,0 +1,8 @@
+<h2> Articles in this Series</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h5><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h5>
+    </li>
+  {% endfor %}
+</ul>
