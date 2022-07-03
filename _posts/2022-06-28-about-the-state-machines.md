@@ -1,7 +1,7 @@
 # About the State Machines
 How the code knows what to do the next time the MCU wakes up
 
-<!-
+<!--
 ## Articles in This Series
 <ul>
   <li><h5><a href="https://iowadave.github.io/ATtiny_Soil_Sentinel/">Home</a></h5></li>  
