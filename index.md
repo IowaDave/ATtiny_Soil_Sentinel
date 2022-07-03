@@ -18,8 +18,6 @@ Now I'm writing it up. You can read the following articles in any order you choo
 </ul>
 ------------------- end comment    -->
 
-Trying this new approach to listing the posts:
-
 {% include post_list.html %}
 
 ## Overview
