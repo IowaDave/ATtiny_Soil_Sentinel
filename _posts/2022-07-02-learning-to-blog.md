@@ -61,28 +61,28 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 
 Mine looked something like this at the the time of writing:
 
-{* raw *}
+
 ```
 <h2> Articles in this Series</h2>
 <ul>
-  {% for post in site.posts %}
+  {* raw *}{% for post in site.posts %}{* endraw *}
     <li>
       <h6>
-        <a href="{{site.baseurl}}{{ post.url }}"
-          {% if post.title == page.title %}
+        {* raw *}<a href="{{site.baseurl}}{{ post.url }}"{* endraw *}
+          {* raw *}{% if post.title == page.title %}{* endraw *}
              style="color: black;"
-          {% endif %}>
-          {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
+          {* raw *}{% endif %}{* endraw *}>
+          {* raw *}{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}{* endraw *}
         </a>
-        {% if post.title == page.title %}
+        {* raw *}{% if post.title == page.title %}{* endraw *}
           &nbsp; << You are here.
-        {% endif %}        
+        {* raw *}{% endif %}{* endraw *}        
       </h6>
     </li>
-  {% endfor %}
+  {* raw *}{% endfor %}{* endraw *}
 </ul>
 ```
-{* endraw *}
+
 
 ## Online references
 The following links helped me to understand how Github does blogs.
