@@ -62,21 +62,21 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 ```html
 <h2> Articles in this Series</h2>
 <ul>
-  {% for post in site.posts %}
+  \{\% for post in site.posts \%\}
     <li>
       <h6>
-        <a href="{{ site.baseurl }}{{ post.url }}"
-          {% if post.title == page.title %}
+        <a href="\{\{ site.baseurl \}\}\{\{ post.url \}\}"
+          \{\% if post.title == page.title \%\}
              style="color: black;"
-          {% endif %}>
-          {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
+          \{\% endif \%\}>
+          \{\{ post.date | date: "%Y-%m-%d" \}\} : \{\{ post.title \}\}
         </a>
-        {% if post.title == page.title %}
+        \{\% if post.title == page.title \%\}
           &nbsp; << You are here.
-        {% endif %}        
+        \{\% endif \%\}        
       </h6>
     </li>
-  {% endfor %}
+  \{\% endfor \%\}
 </ul>
 ```
 Notice that the {{ site.baseurl }} variable occurs immediately prior to the {{ post.url }} variable.
