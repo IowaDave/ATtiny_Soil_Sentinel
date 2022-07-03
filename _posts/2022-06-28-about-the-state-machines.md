@@ -1,17 +1,7 @@
 # About the State Machines
 How the code knows what to do the next time the MCU wakes up
 
-<!--
-## Articles in This Series
-<ul>
-  <li><h5><a href="https://iowadave.github.io/ATtiny_Soil_Sentinel/">Home</a></h5></li>  
-  {% for post in site.posts %}
-    <li>
-      <h5><a href="{{site.baseurl}}{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}</a></h5>
-    </li>
-  {% endfor %}
-</ul>
--->
+<!-- The following produces a list of posts. -->
 
 {% include post_list.html %}
 
