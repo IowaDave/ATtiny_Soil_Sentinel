@@ -62,7 +62,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 ```html
 <h2> Articles in this Series</h2>
 <ul>
-  &#x007B;&#x0025; for post in site.posts &#x0025;&#x007D;
+  &lbrace;&percnt; for post in site.posts &percnt;&rbrace;
     <li>
       <h6>
         <a href="&#x007B;&#x007B; site.baseurl &#x007D;&#x007D;&#x007B;&#x007B; post.url &#x007D;&#x007D;"
