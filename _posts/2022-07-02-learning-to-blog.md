@@ -61,8 +61,8 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 
 Mine looked something like this at the the time of writing:
 
+```
 <h2> Articles in this Series</h2>
-<pre>
 <ul>
   {{ "{% for post in site.posts %}" | escape }}
     <li>
@@ -80,7 +80,7 @@ Mine looked something like this at the the time of writing:
     </li>
   {{ "{% endfor %}" | escape }}
 </ul>
-</pre>
+```
 
 ## Online references
 The following links helped me to understand how Github does blogs.
