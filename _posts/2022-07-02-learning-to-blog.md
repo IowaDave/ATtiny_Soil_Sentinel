@@ -79,7 +79,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
   \{\% endfor \%\}
 </ul>
 ```
-Notice that the {{ site.baseurl }} variable occurs immediately prior to the {{ post.url }} variable.
+Notice that the \{\{ site.baseurl \}\} variable occurs immediately prior to the \{\{ post.url \}\} variable.
 
 ## Online references
 The following links helped me to understand how Github does blogs.
