@@ -57,29 +57,7 @@ So far, so good, but how to add posts easily?
 
 Variables you define in ```_config.yml``` become ```site``` variables in the page text, as shown next, and as explained in the references listed below.
 
-**Trick #3**: Include a code block on every post page that lists the available blog articles. At the time of writing, mine looked something like the following.
-
-```html
-<h2> Articles in this Series</h2>
-<ul>
-  &lbrace;&percnt; for post in site.posts &percnt;&rbrace;
-    <li>
-      <h6>
-        <a href="&#x007B;&#x007B; site.baseurl &#x007D;&#x007D;&#x007B;&#x007B; post.url &#x007D;&#x007D;"
-          &#x007B;&#x0025; if post.title == page.title &#x0025;&#x007D;
-             style="color: black;"
-          &#x007B;&#x0025; endif &#x0025;&#x007D;>
-          &#x007B;&#x007B; post.date | date: "&#x0025;Y-&#x0025;m-&#x0025;d" &#x007D;&#x007D; : &#x007B;&#x007B; post.title &#x007D;&#x007D;
-        </a>
-        &#x007B;&#x0025; if post.title == page.title &#x0025;&#x007D;
-          &nbsp; << You are here.
-        &#x007B;&#x0025; endif &#x0025;&#x007D;        
-      </h6>
-    </li>
-  &#x007B;&#x0025; endfor &#x0025;&#x007D;
-</ul>
-```
-Notice that the \{\{ site.baseurl \}\} variable occurs immediately prior to the \{\{ post.url \}\} variable.
+**Trick #3**: Include a code block on every post page that lists the available blog articles. 
 
 ## Online references
 The following links helped me to understand how Github does blogs.
