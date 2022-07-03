@@ -55,6 +55,8 @@ So far, so good, but how to add posts easily?
 
 ```baseurl: /ATtiny_Soil_Sentinel```
 
+Variables you define in ```_config.yml``` become ```site``` variables in the page text, as shown next, and as explained in the references listed below.
+
 **Trick #3**: Include a code block on every post page that lists the available blog articles. At the time of writing, mine looked something like the following.
 
 ```html
@@ -77,13 +79,20 @@ So far, so good, but how to add posts easily?
   {% endfor %}
 </ul>
 ```
+Notice that the {{ site.baseurl }} variable occurs immediately prior to the {{ post.url }} variable.
 
 ## Online references
 The following links helped me to understand how Github does blogs.
 
 <hr>
 
-###### Github Pages
+###### [Github Pages](https://pages.github.com/)
+Remember that you can create files and folders directly in the Github web client, if you prefer.
+
+It's interesting to me that Github says, &ldquo;You get one site per GitHub account and organization,
+and unlimited project sites.&rdquo; Yet, they tell you only about building the "one" site for your account's user name.
+
+The steps are the same for any other repo in your account. The difference is to define ```baseurl: /<repo_name>``` in the ```_config.yml``` file, and to 
 
 <hr>
 
@@ -97,7 +106,17 @@ Liquid calls itself a Template Language. I would say it fills some of the same r
 
 <hr>
 
-###### YAML
+###### [YAML](https://yaml.org/spec/1.2.2/)
+This is one of those fun, recursive acronyms that open-source gurus dearly love. It supposedly means, &ldquo;YAML Ain't Markup Language&rdquo;. But what is it, then? YAML is a language for converting data between a text format easy for people to read and a compact data structure defined in a programming language.
+
+Huh?
+
+Jekyll and Liquid use YAML for the site configuration file and for page-specific variables.  YAML transforms:
+
+* name:value pairs that are easy and self-documenting to write as text, 
+    * example: ```baseurl: /<repo_name```
+* into variables for Jekyll and Liquid to use,
+    * example: {{ site.baseurl }}, which prints as ```/repo_name```.
 
 <hr>
 
