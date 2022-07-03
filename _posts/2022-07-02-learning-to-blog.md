@@ -55,10 +55,27 @@ So far, so good, but how to add posts easily?
 
 ```baseurl: /ATtiny_Soil_Sentinel```
 
-**Trick #3**: Include a code block on every page that lists the available blog articles. At the time of writing, mine looked something like the following.
+**Trick #3**: Include a code block on every post page that lists the available blog articles. At the time of writing, mine looked something like the following.
 
 ```html
-
+<h2> Articles in this Series</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h6>
+        <a href="{{ site.baseurl }}{{ post.url }}"
+          {% if post.title == page.title %}
+             style="color: black;"
+          {% endif %}>
+          {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
+        </a>
+        {% if post.title == page.title %}
+          &nbsp; << You are here.
+        {% endif %}        
+      </h6>
+    </li>
+  {% endfor %}
+</ul>
 ```
 
 ## Online references
@@ -66,8 +83,8 @@ So far, so good, but how to add posts easily?
 ###### Github Pages
 
 
-###### Jekyll
-
+###### [Jekyll](https://jekyllrb.com/docs/step-by-step/01-setup/)
+Here I've linked to the Step-by-Step Tutorial. The Jekyll site provides very nice navigation: lots of links on every page to other documentation and information.
 
 ###### Liquid
 
