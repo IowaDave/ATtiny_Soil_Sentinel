@@ -49,15 +49,16 @@ Better yet, create a new home page file in the ```gh-pages``` branch. Write it i
 So far, so good, but how to add posts easily?
 
 #### Three Key Tricks for Blogs in a Project Repository
-**Trick #1**: Place blog post articles in a folder named ```_posts```. Write them in
+**Trick #1**: Place blog post articles in a folder named ```_posts```. Write them in Markdown.
 
 **Trick #2**: Define a ```baseurl``` in the ```_config.yml``` file, like this:
 
 ```baseurl: /ATtiny_Soil_Sentinel```
 
-Variables you define in ```_config.yml``` become ```site``` variables in the page text, as shown next, and as explained in the references listed below.
+Variables you define in ```_config.yml``` become ```site``` variables in the page text.
 
 **Trick #3**: Include a code block on every post page that lists the available blog articles. 
+
 
 ## Online references
 The following links helped me to understand how Github does blogs.
@@ -69,8 +70,6 @@ Remember that you can create files and folders directly in the Github web client
 
 It's interesting to me that Github says, &ldquo;You get one site per GitHub account and organization,
 and unlimited project sites.&rdquo; Yet, they tell you only about building the "one" site for your account's user name.
-
-The steps are the same for any other repo in your account. The difference is to define ```baseurl: /<repo_name>``` in the ```_config.yml``` file, and to 
 
 <hr>
 
@@ -89,11 +88,11 @@ This is one of those fun, recursive acronyms that open-source gurus dearly love.
 
 Huh?
 
-Jekyll and Liquid use YAML for the site configuration file and for page-specific variables.  YAML transforms:
+Jekyll and Liquid use YAML for the site configuration file and for page-specific variables.  YAML takes:
 
 * name:value pairs that are easy and self-documenting to write as text, 
     * example: ```baseurl: /<repo_name```
-* into variables for Jekyll and Liquid to use,
+* and transforms them into variables for Jekyll and Liquid to use,
     * example: {{ site.baseurl }}, which prints as ```/repo_name```.
 
 <hr>
@@ -103,8 +102,8 @@ It's a kind of souped-up CSS for styling web pages. Github uses it, so I include
 
 Note: Github will ignore any custom ```style``` tags or attributes you type directly into your page text. They have their reasons. Thankfully, they do allow you to create and use your own custom styling, if you wish. Follow Github's instructions for [Customizing your theme's CSS](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#customizing-your-themes-css).
 
-I link to this resource here for the sake of informational completeness. Editorial views expressed on their web site regarding topics other than technology are their own. I respect their sincerity while reserving my right to keep my own thoughts to myself.
+I link to this resource here for the sake of informational completeness. Editorial views expressed on their web site regarding topics other than technology are their own.
 
 <hr>
 ###### [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-Github Pages transforms Markdown text into html. So you don't have to.
+Github Pages transforms Markdown text into html. So you don't have to. Yay!
