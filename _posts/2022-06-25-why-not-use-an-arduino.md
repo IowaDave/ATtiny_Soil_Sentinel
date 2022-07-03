@@ -10,6 +10,7 @@ Disadvantages of Arduino:
 
 Real-life devices that need an MPU typically use only the MPU chip. I wanted to learn how that works.
 
+<!--
 ## Articles in this Series
 <ul>
   <li><h5><a href="https://iowadave.github.io/ATtiny_Soil_Sentinel/">Home</a></h5></li>  
@@ -19,6 +20,10 @@ Real-life devices that need an MPU typically use only the MPU chip. I wanted to 
     </li>
   {% endfor %}
 </ul>
+-->
+
+{% include post_list.html %}
+
 
 ## Hardware
 Arduino surrounds a microcontroller chip with other components, including:
