@@ -1,3 +1,6 @@
+---
+title: Home
+---
 # Building the ATtiny Soil Sensor
 An "Arduino" project without the Arduino!
 
