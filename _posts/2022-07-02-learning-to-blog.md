@@ -59,7 +59,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 
 **Trick #3**: Include a code block on every post page that lists the available blog articles. 
 
-Mine looked something like this at the the time of writing. Notice how the ```{{ site.baseurl }}``` variable precedes ```{{ post.url }}```. There is no space or slant ( &sol; ) character between them:
+<p>Mine looked something like this at the the time of writing. Notice how the <code>&lbrace;{ site.baseurl }&rbrace;</code> variable precedes <code>&lbrace;{ post.url }&rbrace;</code>. There is no space or slant ( &sol; ) character between them:</p>
 
 
 <pre><code>
