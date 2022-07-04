@@ -1,14 +1,16 @@
 # Learning to Blog
 The Sentinel project entails so many different chapters that I finally learned how to use Github for blogging.
 
-This post is organized in two parts:
-1. The parts (almost) no one told me.
-2. Links to some good information online.
+This post is organized in three parts:
+
+1. [The parts (almost) no one told me](#the-parts-no-one-told-me)
+2. [Three Key Tricks for Blogs in a Project Repository](#three-key-tricks-for-blogs-in-a-project-repository)
+3. [Links to important references](#online-references)
 
 <!-- The following produces a list of posts -->
 {% include post_list.html %}
 
-## The Parts No One Told Me
+#### The Parts No One Told Me
 Including two sections:
 
 <ul>
@@ -16,13 +18,17 @@ Including two sections:
   <li><h4>Three Key Tricks for Blogs in a Project Repository</h4></li>
 </ul>
 
-I feel safe in saying that all of the online tutorials and guides assume the user will create blog content on their own computer first.
+I feel safe in saying that online references and tutorials such as [those listed below](#online-references) assume the user will create blog content on their own computer first.
 
 You do not have to do it that way.
 
-These guides teach how to download a bundle of software including Ruby, Jekyll, YAML and SASS. The tools transform text you write into web pages. Github deploys those tools on its servers. The tutorials expect that you will want the tools to be on your local machine, too. Maybe it's even a good idea. But it's not strictly necessary.
+Studying the software Github Pages uses, including Ruby, Jekyll, YAML and SASS, repays the effort fairly quickly. The tutorials anticipate that you will want the tools to be on your local machine, too. Maybe it's even a good idea. 
 
-My practice is to build the repository first, including a descriptive README file. Sometimes I go farther to publish a web article about it after the code and examples are complete. Log in to Github, open the repo in the browser. The following sequence would work at the time of writing in early July, 2022:
+Yet, as I said, it's not strictly necessary. I go about it differently.
+
+My practice is to build the repository first, including a descriptive README file. Sometimes I want to go farther, to publish a web article about it after the code and examples are complete. 
+
+I log in to Github and open the repo in the browser. Then I prepare the same files that the tutorials describe, but using the web interface. The following sequence would work at the time of writing in early July, 2022:
 
 * Create a branch named ```gh-pages``` and navigate to that branch.
 * Click the Settings icon
@@ -40,7 +46,7 @@ title: ATtiny Soil Sensor
 description: Much to learn!
 ```
 
-You can see how those definitions are used the top of every page in this blog.
+You can see how those definitions are used the top of this page. They get applied to every page in this blog.
 
 Behind the scenes, Jekyll transforms the README file into a home page. One does not have to write the html code for that page. Jekyll takes care of it.
 
@@ -51,7 +57,7 @@ So far, so good, but how to add posts easily?
 #### Three Key Tricks for Blogs in a Project Repository
 **Trick #1**: Place blog post articles in a folder named ```_posts```. Write them in Markdown.
 
-**Trick #2**: Define a ```baseurl``` in the ```_config.yml``` file, like this:
+**Trick #2**: Define a ```baseurl``` in the ```_config.yml``` file. Its value would be the name of the repo, including a forward slant. For example the name of this project's repo is <span>&ldquo;ATtiny_Soil_Sentinel&rdquo;</span>. The ```baseurl``` definition looks like this:
 
 ```baseurl: /ATtiny_Soil_Sentinel```
 
@@ -84,7 +90,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 </code></pre>
 
 
-## Online references
+#### Online references
 The following links helped me to understand how Github does blogs.
 
 <hr>
