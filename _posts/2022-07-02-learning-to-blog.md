@@ -11,12 +11,6 @@ This post is organized in three parts:
 {% include post_list.html %}
 
 #### The Parts No One Told Me
-Including two sections:
-
-<ul>
-  <li><h4>Do It All in the Web Interface</h4></li>
-  <li><h4>Three Key Tricks for Blogs in a Project Repository</h4></li>
-</ul>
 
 I feel safe in saying that online references and tutorials such as [those listed below](#online-references) assume the user will create blog content on their own computer first.
 
