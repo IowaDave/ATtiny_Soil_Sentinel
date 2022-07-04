@@ -90,10 +90,12 @@ The following links helped me to understand how Github does blogs.
 <hr>
 
 ###### [Github Pages](https://pages.github.com/)
-Remember that you can create files and folders directly in the Github web client, if you prefer.
+Remember that you can create files and folders directly in the Github web client, if you prefer. Fair warning: it can take Github Pages up to ten minutes to display a web rendition of a text file that you edit and commit in the Github web editor.
 
 It's interesting to me that Github says, &ldquo;You get one site per GitHub account and organization,
 and unlimited project sites.&rdquo; Yet, they tell you only about building the "one" site for your account's user name.
+
+Of course, that is why I wrote this blog post: to demonstrate that project repos can host blogs also.
 
 <hr>
 
@@ -103,7 +105,7 @@ Here I've linked to the Step-by-Step Tutorial. The Jekyll site provides very nic
 <hr>
 
 ###### [Liquid](https://shopify.github.io/liquid/)
-Liquid calls itself a Template Language. I would say it fills some of the same rolein flow control (if-then, case-when) and iteration (e.g., for loops) that PHP performs in a server-side blog application such as WordPress.
+Liquid calls itself a Template Language. I would say it fills some of the same roles in flow control (if-then, case-when) and iteration (e.g., for loops) that PHP performs in a server-side blog application such as WordPress.
 
 <hr>
 
