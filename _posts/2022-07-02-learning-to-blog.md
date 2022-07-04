@@ -65,21 +65,21 @@ Mine looked something like this at the the time of writing:
 <pre><code>
 &lt;h2&gt; Articles in this Series&lt;/h2&gt;
 &lt;ul&gt;
-  {% for post in site.posts %}
+  &lbrace;% for post in site.posts %&rbrace;
     &lt;li&gt;
       &lt;h6&gt;
         &lt;a href="{{site.baseurl}}{{ post.url }}"
-          {% if post.title == page.title %}
+          &lbrace;% if post.title == page.title %&rbrace;
              style="color: black;"
-          {% endif %}&gt;
+          &lbrace;% endif %&rbrace;&gt;
           {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
         &lt;/a&gt;
-        {% if post.title == page.title %}
+        &lbrace;% if post.title == page.title %&rbrace;
           &nbsp; &lt;&lt; You are here.
-        {% endif %}     
+        &lbrace;% endif %&rbrace;    
       &lt;/h6&gt;
     &lt;/li&gt;
-  {% endfor %}
+  &lbrace;% endfor %&rbrace;
 &lt;/ul&gt;
 </code></pre>
 
