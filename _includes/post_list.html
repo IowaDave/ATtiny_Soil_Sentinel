@@ -1,6 +1,15 @@
 <h2> Articles in this Series</h2>
 <ul>
-  <li><h6><a href="/">Home</a></h6></li>
+  <li><h6>
+    <a href="/"
+      {% if page.title == "Home" %}
+         style="color: black;"
+      {% endif %}
+    >Home</a>
+    {% if page.title == "Home" %}
+          &nbsp; << You are here.
+    {% endif %}        
+  </h6></li>
   {% for post in site.posts %}
     <li>
       <h6>
