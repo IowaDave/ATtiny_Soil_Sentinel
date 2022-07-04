@@ -42,8 +42,6 @@ int main() {
  
 The other way takes advantage of some unique features in [Spence Konde's core code for ATtiny chips](https://github.com/SpenceKonde/ATTinyCore). It modifies the Tools menu of the Arduino IDE to give you the choice to disable the millis()/micros() code insertion. The delay() function goes away too, as it depends on millis().
 
-By the way, the code certainly does implement long pauses between actions. Rather than delay(), it sleeps. That's a topic for another post.
-
 ##### No text output
 The Sentinel communicates by flashing an LED. This decision eliminates the need for space-hungry libraries to output text.
 
@@ -52,6 +50,17 @@ Just for fun, I compiled a "Hello World" program to use the USART (serial) outpu
 ```Serial.println("Hello World");```
 
 It gobbled up almost the entire memory of the poor little thing.
+
+### Save Power
+By the way, the Sentinel certainly does implement long pauses between actions. Rather than delay(), it sleeps. 
+
+The delay() function keeps the MCU running constantly, consuming power, while it counts down a number of milliseconds. Not only does it consume power, it hogs the processor.
+
+Sleep, combined with a timed, recurring interrupt, affords an alternative way to implement pauses between code operations. AVR chips like the 328P and the 2313 provide a number of different timers and sleep modes that can be used that way.
+
+The most economical combination is the Watchdog Timer and the Power-down Sleep mode. The code described below uses that combination.
+
+How it works is a topic for another post.
 
 ### Use libraries
 Making code smaller has another dimension: keeping code listings short.
