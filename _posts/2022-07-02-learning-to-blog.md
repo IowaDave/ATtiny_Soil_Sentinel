@@ -27,7 +27,7 @@ My practice is to build the repository first, including a descriptive README fil
 * Create a branch named ```gh-pages``` and navigate to that branch.
 * Click the Settings icon
 * Click the Pages link in the Code and Automation group
-* Under Source, choose the gh-pages branch and the /(root) folder. Click Save.
+* Under Source, choose the ```gh-pages``` branch and the ```/(root)``` folder. Click Save.
 * Click Change Theme, choose a theme. For example, this page uses Slate.
 * Navigate back to the ```gh-pages``` branch of the repo.
 
@@ -117,9 +117,9 @@ Huh?
 Jekyll and Liquid use YAML for the site configuration file and for page-specific variables.  YAML takes:
 
 * name:value pairs that are easy and self-documenting to write as text, 
-    * example: ```baseurl: /<repo_name```
+    * example: ```baseurl: /<repo_name>```
 * and transforms them into variables for Jekyll and Liquid to use,
-    * example: {{ site.baseurl }}, which prints as ```/repo_name```.
+    * example: <span>&lbrace;{ site.baseurl }&rbrace;</span>, which prints as ```/<repo_name>```.
 
 <hr>
 
