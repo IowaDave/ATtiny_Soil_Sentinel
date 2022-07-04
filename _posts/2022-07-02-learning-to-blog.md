@@ -62,7 +62,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 Mine looked something like this at the the time of writing:
 
 
-<code>
+<code><pre>
 &lt;h2&gt; Articles in this Series&lt;/h2&gt;
 &lt;ul&gt;
   {% for post in site.posts %}
@@ -81,7 +81,7 @@ Mine looked something like this at the the time of writing:
     &lt;/li&gt;
   {* raw *}{% endfor %}{* endraw *}
 &lt;/ul&gt;
-</code>
+</pre></code>
 
 
 ## Online references
