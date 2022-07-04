@@ -68,7 +68,7 @@ Mine looked something like this at the the time of writing:
   &lbrace;% for post in site.posts %&rbrace;
     &lt;li&gt;
       &lt;h6&gt;
-        &lt;a href="{{site.baseurl}}{{ post.url }}"
+        &lt;a href="&lbrace;{site.baseurl}&rbrace;&lbrace;{ post.url }&rbrace;"
           &lbrace;% if post.title == page.title %&rbrace;
              style="color: black;"
           &lbrace;% endif %&rbrace;&gt;
