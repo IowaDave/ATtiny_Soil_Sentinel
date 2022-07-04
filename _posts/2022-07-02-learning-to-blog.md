@@ -62,26 +62,26 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 Mine looked something like this at the the time of writing:
 
 
-```
-<h2> Articles in this Series</h2>
-<ul>
-  {* raw *}{% for post in site.posts %}{* endraw *}
-    <li>
-      <h6>
-        {* raw *}<a href="{{site.baseurl}}{{ post.url }}"{* endraw *}
-          {* raw *}{% if post.title == page.title %}{* endraw *}
+<code>
+&lt;h2&gt; Articles in this Series&lt;/h2&gt;
+&lt;ul&gt;
+  {% for post in site.posts %}
+    &lt;li&gt;
+      &lt;h6&gt;
+        %lt;a href="{{site.baseurl}}{{ post.url }}"
+          {% if post.title == page.title %}
              style="color: black;"
-          {* raw *}{% endif %}{* endraw *}>
+          {% endif %}&gt;
           {* raw *}{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}{* endraw *}
-        </a>
+        &lt;/a&gt;
         {* raw *}{% if post.title == page.title %}{* endraw *}
-          &nbsp; << You are here.
+          &nbsp; &lt;&lt; You are here.
         {* raw *}{% endif %}{* endraw *}        
-      </h6>
-    </li>
+      &lt;/h6&gt;
+    &lt;/li&gt;
   {* raw *}{% endfor %}{* endraw *}
-</ul>
-```
+&lt;/ul&gt;
+</code>
 
 
 ## Online references
