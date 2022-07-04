@@ -59,6 +59,8 @@ Each time the ISR enters the state machine, it runs only the case code correspon
 2. sets the time remaining on the LED to one second,
 3. and changes the LED state to MOIST_OFF.
 
+Something to notice about the LED state: it establishes the action to take *the next time* the ISR runs.
+
 One second later, the ISR enters the LED state machine again. This time it jumps to the MOIST_OFF code, which:
 1. turns the LED off,
 2. sets the time remaining on the LED to 9 seconds,
