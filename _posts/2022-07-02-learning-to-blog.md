@@ -72,14 +72,14 @@ Mine looked something like this at the the time of writing:
           {% if post.title == page.title %}
              style="color: black;"
           {% endif %}&gt;
-          {* raw *}{{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}{* endraw *}
+          {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
         &lt;/a&gt;
-        {* raw *}{% if post.title == page.title %}{* endraw *}
+        {% if post.title == page.title %}
           &nbsp; &lt;&lt; You are here.
-        {* raw *}{% endif %}{* endraw *}        
+        {% endif %}     
       &lt;/h6&gt;
     &lt;/li&gt;
-  {* raw *}{% endfor %}{* endraw *}
+  {% endfor %}
 &lt;/ul&gt;
 </pre></code>
 
