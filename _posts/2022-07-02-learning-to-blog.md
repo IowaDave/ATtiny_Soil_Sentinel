@@ -59,7 +59,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
 
 **Trick #3**: Include a code block on every post page that lists the available blog articles. 
 
-Mine looked something like this at the the time of writing:
+Mine looked something like this at the the time of writing. Notice how the ```{{ site.baseurl }}``` variable precedes ```{{ post.url }}```. There is no space or slant ( &sol; ) character between them:
 
 
 <pre><code>
@@ -68,7 +68,7 @@ Mine looked something like this at the the time of writing:
   &lbrace;% for post in site.posts %&rbrace;
     &lt;li&gt;
       &lt;h6&gt;
-        &lt;a href="&lbrace;{site.baseurl}&rbrace;&lbrace;{ post.url }&rbrace;"
+        &lt;a href="&lbrace;{ site.baseurl }&rbrace;&lbrace;{ post.url }&rbrace;"
           &lbrace;% if post.title == page.title %&rbrace;
              style="color: black;"
           &lbrace;% endif %&rbrace;&gt;
