@@ -72,7 +72,7 @@ Variables you define in ```_config.yml``` become ```site``` variables in the pag
           &lbrace;% if post.title == page.title %&rbrace;
              style="color: black;"
           &lbrace;% endif %&rbrace;&gt;
-          {{ post.date | date: "%Y-%m-%d" }} : {{ post.title }}
+          &lbrace;{ post.date | date: "%Y-%m-%d" }&rbrace; : &lbrace;{ post.title }&rbrace;
         &lt;/a&gt;
         &lbrace;% if post.title == page.title %&rbrace;
           &nbsp; &lt;&lt; You are here.
