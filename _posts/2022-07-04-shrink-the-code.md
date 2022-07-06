@@ -78,17 +78,13 @@ I have grown to favor the practice of splitting code into separate modules. This
 
 **utilities.cpp** implements the C++ functions declared in the header file.
 
-**wdtisr.c** is really special. It's a C language module, rather than C++. It implements the interrupt service routine (ISR) for the watchdog timer overflow interrupt. 
+Note: the following was edited July 6, 2022 to correct a misunderstanding on my part. Thanks to Tom Almy for pointing my way back onto the path of Truth and Light.
 
-I learned that "ISR" is a special, C-language macro that invokes deep magic during the code compilation process. It looks like a regular function, but is different in some important way. As a result, it will not be happy in a regular C++ code module. It needs to be in a C module, that is, one having a file name suffix of ".c".
+**wdtisr.h** is a header file that defines a number of timing-related constants. It also imports the "Arduino.h" header file, which is necessary for the the watchgog time interrupt service routine (ISR) to compile.
 
-Most of the examples one finds online for using ISRs in Arduino code place the ISR at the end of the main, ".ino" code file. However, I wanted to keep that file short by moving the ISR to a separate module. 
+**wdtisr.cpp** implements the ISR. This file imports the wdtisr.h header file, which in turn imports the "Arduino.h" header file, without which the ISR will not compile.
 
-Alas, moving the ISR into files that end with ".h" or ".cpp" produced many different error messages. 
-
-What a happy moment it was when I found a forum article explaining that ISR is a C-language thing. Placing the ISR in a ".c" module and #importing it at the end of the main ".ino" file satisfied my goal.
-
-This file, ```wdtisr.c```, is where all the action takes place with the Sentinel. It is described more fully in other posts.
+The ISR is discussed more fully in another post.
 
 
  
