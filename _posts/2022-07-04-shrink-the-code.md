@@ -68,11 +68,11 @@ Making code smaller has another dimension: keeping code listings short.
 I have grown to favor the practice of splitting code into separate modules. This project has four. You can view the code folder by opening the following link in a separate tab or window: [https://github.com/IowaDave/ATtiny_Soil_Sentinel/tree/main/ATtiny_Soil_Sentinel](https://github.com/IowaDave/ATtiny_Soil_Sentinel/tree/main/ATtiny_Soil_Sentinel).
 
 **ATtiny_Soil_Sentinel.ino** is the main code module. It consists mostly of explanatory comments. 
-* The ```#include``` directive imports declarations and code from the ```utilities``` module. 
+* The ```#include``` directive imports declarations and code from the ```utilities``` and ```wdtisr```modules. 
 * The setup() block calls some functions defined in that module. 
 * It also sets certain bits in a couple of memory locations.
 * The loop() function merely puts the MCU to sleep. Over and over again.
-* At the very end, the directive to ```#include wdtisr.c``` brings in the watchdog timer interrupt service routine (ISR). 
+* As will be explained in another post, all of the recurring action takes place in the ```wdtisr``` module.
 
 **utilities.h** is a header file that defines a key environment variable and declares a set of function prototypes.
 
