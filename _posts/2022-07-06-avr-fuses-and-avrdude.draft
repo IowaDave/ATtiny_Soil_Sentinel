@@ -16,7 +16,7 @@ It might help to refer to Table 67 on page 160 of the [datasheet for the ATtiny2
 
 First, footnote 2 under this table tells us that the default settings for Bits 3 through 0 cause an "internal RC oscillator" to run at a rate of 8 MHz. Since that is the rate we want, we go with the default settings for these four bits.
 
-Then, look at Bit 7, named CKDIV8, described as "Divide Clock by 8." The datasheet tells us that this bit is "programmed" by default.
+Look at Bit 7, named CKDIV8, described as "Divide Clock by 8." The datasheet tells us that this bit is "programmed" by default.
 
 It means that the oscillator setting of 8 MHz will be divided by 8 to produce the final running speed of the chip, that is, 8 MHz / 8 = 1 MHz. 
 
@@ -26,20 +26,25 @@ But wait. Bit 7 is "0" by default. Doesn't a "0" usually mean "off" (or "false" 
 
 True. Nearly always. Except special places inside AVR chips where "0" means "yes, do the described action" and "1" means "no, do not do that action." Fuse bytes are one of those special places.
 
-It's very helpful that the datasheet clarifies the meaning for each bit. "0" means "programmed" and "1" means "unprogrammed". 
-
-We need to change the CKDIV8 bit to 1 from 0. The other bits can remain as they are.
+It's very helpful that the datasheet clarifies the meaning for each bit. "0" means "programmed" and "1" means "unprogrammed". We need to change the CKDIV8 bit to 1 from 0. The other bits can remain as they are.
 
 All we have to do is to write a new 8-bit value to the Low Fuse Byte.  Let's calculate the new value.
 
-By default the Low Fuse byte has the binary value of 0b01100100 = 0x64 in hexadecimal.
+| |Binary|Hex|
+|---|---|---|
+|Old Value|0b01100100|0x64|
+|New value|0b11100100|0xE4|
 
-"Unprogramming" CKDIV8 puts a 1 at bit 7, giving a binary value of 0b11100100 = 0xE4 hex. So: that's the new value to write.
+So: we need to write 0xE4 to the Low Fuse byte.
 
 ### AVRDUDE
 
-Arduino IDE installs (and uses) a handy command-line tool for reading and writing the memory of an AVR microcontroller. Its name is "avrdude". Where can you find it? Probably in the "Arduino15" directory on your system. 
+Arduino IDE installs (and uses) a handy command-line tool for reading and writing the memory of an AVR microcontroller. Its name is "avrdude". 
 
-On a modern Mac, look in your user account's Library folder. On Linux I believe I remember finding that folder hidden in my Home directory as a "dot" file, that is, ".Arduino15".
+Launching avrdude involves typing a set of parameters on the command line in a terminal window. I like to prepare the command in a text editor.
 
-I'll provide the directions I follow for using avrdude on my Mac. 
+First you need the full path to the avrdude executable file. Where can you find it? Probably in the "Arduino15" directory on your system. 
+
+On a modern Mac running ARduino IDE 1.8.x, look in your user account's Library folder. On Linux I believe I remember finding that folder hidden in my Home directory as a "dot" file, that is, ".Arduino15". Windows? I don't know.
+
+I'll provide the directions I follow for using avrdude on my Mac. Long story made short: I found my copy here: /Users/*<username>*/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/
