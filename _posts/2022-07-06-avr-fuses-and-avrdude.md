@@ -73,7 +73,7 @@ Putting it all together in the text editor gives a long string to copy and paste
 
 ```/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude -C/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf -v -pt2313 -cstk500v1 -P/dev/cu.usbmodem14201 -b19200```
 
-Writing a value with avrdude involves stringing several fields together in a colon-delimited string. I list the fields here: -Ulfuse:w:0xe4:m
+Writing a value with avrdude involves stringing several fields together in a colon-delimited string, for example, ```-Ulfuse:w:0xe4:m```. The following list explains what each field means.
 
 |Field|What it means|
 |---|---|
@@ -83,6 +83,6 @@ Writing a value with avrdude involves stringing several fields together in a col
 |0xe4| the byte value to write |
 |m| means "immediate mode"; write the byte given on the command line |
 
-The fields come together, with their delimiting colon characters, as: ```-Ulfuse:w:0xe4:m```. The complete avrdude command line string for writing "0xe4" to the low byte of the ATtiny2313 is:
+The complete avrdude command line string for writing "0xe4" to the low byte of the ATtiny2313 is:
 
 ```/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude -C/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf -v -pt2313 -cstk500v1 -P/dev/cu.usbmodem14201 -b19200 -Ulfuse:w:0xe4:m```
