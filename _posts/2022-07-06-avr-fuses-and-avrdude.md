@@ -127,7 +127,16 @@ The complete avrdude command line string for writing "0xe4" to the low byte of t
   <span style="white-space: nowrap;">-cstk500v1</span> 
   <span style="white-space: nowrap;">-P&#47;dev&#47;cu.usbmodem14201</span> 
   <span style="white-space: nowrap;">-b19200</span> 
-  <span style="white-space: nowrap;">-&#8209;Ulfuse:w:0xe4:m</span></code>
+  <span style="white-space: nowrap;">-Ulfuse:w:0xe4:m</span>
+</code>
 
-  
-  did span style nowrap work?
+### Side Note About Formatting This Page
+
+<p>I had to replace the "&#47;", "&lt;" and "&gt;" characters with corresponding HTML entities in the command line strings. This was necessary to prevent Github's Markdown processor from interpreting those characters as markup.</p>
+<p>Also, I had to wrap the option letters and the hyphens that precede them inside special &lt;span&gt; tags. For example, 
+  &lt;span style="white-space: nowrap;"&gt;-C&lt;/span&gt;.
+  This presentational markup was necessary to prevent browsers from imposing a line break between the hyphen and the option letter. I say "browsers"; at least I know it prevented the unwanted break in Chrome on a Mac.</p>
+
+It might interest the reader to inspect the html source for this page, to see what it took to achieve the desired result. 
+
+By the way, No: using the special html non-breaking hyphen entity would not be satisfactory in this situation, because the resulting string would not work on the command line. Those non-breaking hyphens are not recognized as hyphens by the shell. The string would only *look* right to the human eye; however, it would not execute. It really needs regular hyphens.
