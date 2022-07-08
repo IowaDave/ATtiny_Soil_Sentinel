@@ -22,12 +22,36 @@ It means that the oscillator setting of 8 MHz will be divided by 8 to produce th
 
 We don't want this slow speed. We want 8 MHz. We need to "unprogram" the CKDIV8 bit, to make it stop dividing the oscillator by 8.
 
-All we have to do is to write a new 8-bit value to the Low Fuse Byte.  Let's calculate the new value.
+All we have to do is to write a new 8-bit value to the Low Fuse Byte. Change Bit7, CKDIV8, to 1 rather than its default value of 0. Let's calculate the new value.
 
-| |Binary|Hex|
-|---|---|---|
-|Old Value|0b01100100|0x64|
-|New value|0b11100100|0xE4|
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Binary</th>
+      <th>Hex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Old Value</td>
+      <td>
+        0b
+        <span style="font-weight: bold;">0</span>
+        1100100</td>
+      <td>0x64</td>
+    </tr>
+    <tr>
+      <td>New value</td>
+      <td>
+        0b
+        <span style="font-weight: bold;">1</span>
+        1100100</td>
+      <td>0xE4</td>
+    </tr>
+  </tbody>
+</table>
+
 
 So: we need to write 0xE4 to the Low Fuse byte.
 
