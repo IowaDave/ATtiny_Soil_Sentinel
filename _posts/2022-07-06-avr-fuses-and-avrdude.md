@@ -99,12 +99,12 @@ Putting it all together in the text editor gives a long string to copy and paste
 
 <code>
   &#47;Users&#47;&lt;account_name&gt;&#47;Library&#47;Arduino15&#47;packages&#47;arduino&#47;tools&#47;avrdude&#47;6.3.0-arduino17&#47;bin&#47;avrdude
-  &#8209;C&#47;Users&#47;&lt;account_name&gt;&#47;Library&#47;Arduino15&#47;packages&#47;arduino&#47;tools&#47;avrdude&#47;6.3.0-arduino17&#47;etc&#47;avrdude.conf 
-  &#8209;v 
-  &#8209;pt2313 
-  &#8209;cstk500v1 
-  &#8209;P&#47;dev&#47;cu.usbmodem14201 
-  &#8209;b19200
+  <span style="white-space: nowrap;">-C</span>&#47;Users&#47;&lt;account_name&gt;&#47;Library&#47;Arduino15&#47;packages&#47;arduino&#47;tools&#47;avrdude&#47;6.3.0-arduino17&#47;etc&#47;avrdude.conf 
+  <span style="white-space: nowrap;">-v</span> 
+  <span style="white-space: nowrap;">-pt2313</span> 
+  <span style="white-space: nowrap;">-cstk500v1</span> 
+  <span style="white-space: nowrap;">-P&#47;dev&#47;cu.usbmodem14201</span> 
+  <span style="white-space: nowrap;">-b19200</span> 
 </code>
 
 Writing a value with avrdude involves stringing several fields together in a colon-delimited string, for example, ```-Ulfuse:w:0xe4:m```. The following list explains what each field means.
@@ -121,14 +121,13 @@ The complete avrdude command line string for writing "0xe4" to the low byte of t
 
 <code>
   &#47;Users&#47;&lt;account_name&gt;&#47;Library&#47;Arduino15&#47;packages&#47;arduino&#47;tools&#47;avrdude&#47;6.3.0-arduino17&#47;bin&#47;avrdude
-  &#8209;C&#47;Users&#47;&lt;account_name&gt;&#47;Library&#47;Arduino15&#47;packages&#47;arduino&#47;tools&#47;avrdude&#47;6.3.0-arduino17&#47;etc&#47;avrdude.conf 
-  &#8209;v 
-  &#8209;pt2313 
-  &#8209;cstk500v1 
-  &#8209;P&#47;dev&#47;cu.usbmodem14201 
-  &#8209;b19200
-  &#8209;Ulfuse:w:0xe4:m
-</code>
+  <span style="white-space: nowrap;">-C</span>&#47;Users&#47;&lt;account_name&gt;&#47;Library&#47;Arduino15&#47;packages&#47;arduino&#47;tools&#47;avrdude&#47;6.3.0-arduino17&#47;etc&#47;avrdude.conf 
+  <span style="white-space: nowrap;">-v</span> 
+  <span style="white-space: nowrap;">-pt2313</span> 
+  <span style="white-space: nowrap;">-cstk500v1</span> 
+  <span style="white-space: nowrap;">-P&#47;dev&#47;cu.usbmodem14201</span> 
+  <span style="white-space: nowrap;">-b19200</span> 
+  <span style="white-space: nowrap;">-&#8209;Ulfuse:w:0xe4:m</span></code>
 
   
-  did that do it?
+  did span style nowrap work?
