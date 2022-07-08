@@ -95,7 +95,9 @@ Finally, the "-b" option sets the baud rate for data communications. Using Ardui
 
 Putting it all together in the text editor gives a long string to copy and paste onto the command line of a terminal window. The following string will *read* the memory of an ATtiny2313 and print out useful information in the terminal window.
 
-<code>/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude &#8209;C/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf &#8209;v &#8209;pt2313 &#8209;cstk500v1 &#8209;P/dev/cu.usbmodem14201 &#8209;b19200</code>
+<code>
+  /Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude &#8209;C/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf &#8209;v &#8209;pt2313 &#8209;cstk500v1 &#8209;P/dev/cu.usbmodem14201 &#8209;b19200
+</code>
 
 Writing a value with avrdude involves stringing several fields together in a colon-delimited string, for example, ```-Ulfuse:w:0xe4:m```. The following list explains what each field means.
 
@@ -109,4 +111,6 @@ Writing a value with avrdude involves stringing several fields together in a col
 
 The complete avrdude command line string for writing "0xe4" to the low byte of the ATtiny2313 is:
 
-<code>/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude &#8209;C/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf &#8209;v &#8209;pt2313 &#8209;cstk500v1 &#8209;P/dev/cu.usbmodem14201 &#8209;b19200 &#8209;Ulfuse:w:0xe4:m</code>
+<code>
+  /Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/bin/avrdude &#8209;C/Users/<account_name>/Library/Arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf &#8209;v &#8209;pt2313 &#8209;cstk500v1 &#8209;P/dev/cu.usbmodem14201 &#8209;b19200 &#8209;Ulfuse:w:0xe4:m
+</code>
