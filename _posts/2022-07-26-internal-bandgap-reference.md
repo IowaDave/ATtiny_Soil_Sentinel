@@ -59,7 +59,11 @@ Notice the 220-Ohm resistor, labeled R2, between the digital output pin of the A
 
 Well, firstly, the ATtiny2313 supplies power to the sensor through the digital output pin. That allows the code to turn the sensor on and off, so it consumes power only during a sensing operation.
 
-Secondly, the sensor is a big capacitor. It wants to suck in a lot of current when it powers-up. However, the ATtiny2313 should not be asked to source more than 40 milliAmps through a digital pin, max. R2 functions as a current-limiting resistor. It restricts the current to about 20 mA flowing into the sensor. This makes life more comfortable for the 2313 controller. The code allows the sensor several seconds to charge-up the capacitor fully before taking a reading. 
+Secondly, keep in mind the sensor is a big capacitor. It wants to suck in a lot of current when it powers-up. However, the ATtiny2313 should not be asked to source more than 40 milliAmps through a digital pin, max. 
+
+R2 functions as a current-limiting resistor. It restricts the current to about 20 mA flowing into the sensor. This makes life more comfortable for the 2313 controller. To compensate, the code allows the sensor several seconds to charge-up the capacitor fully before taking a reading. 
+
+I want to thank Tom Almy for pointing out the considerations for limiting current when a capacitive load attaches to a digital pin.
 
 ## Better than Battery
 The internal bandgap reference voltage does not change enough to affect analog input, even as the battery voltage supplying the chip fades from 5 volts down to 3.3 volts or lower.
