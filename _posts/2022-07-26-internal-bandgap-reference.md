@@ -54,6 +54,13 @@ A 2 megaOhm potentiometer can serve as a convenient, adjustable voltage divider 
 
 Why such a large resistance value, 2 megaOhms, for the potentiometer? Because the current from the sensor is very small and potentiometers are resistors that drop voltage when current is held constant. For example, a 20 K&Omega; potentiometer cuts the sensor's measurable voltage output in half *before* the wiper further divides it. The 2 M&Omega; pot drops almost no voltage.
 
+### What Does R2 Do?
+Notice the 220-Ohm resistor, labeled R2, between the digital output pin of the ATtiny2313 and the voltage-in pin of the sensor. What is it doing there? 
+
+Well, firstly, the ATtiny2313 supplies power to the sensor through the digital output pin. That allows the code to turn the sensor on and off, so it consumes power only during a sensing operation.
+
+Secondly, the sensor is a big capacitor. It wants to suck in a lot of current when it powers-up. However, the ATtiny2313 should not be asked to source more than 40 milliAmps through a digital pin, max. R2 functions as a current-limiting resistor. It restricts the current to about 20 mA flowing into the sensor. This makes life more comfortable for the 2313 controller. The code allows the sensor several seconds to charge-up the capacitor fully before taking a reading. 
+
 ## Better than Battery
 The internal bandgap reference voltage does not change enough to affect analog input, even as the battery voltage supplying the chip fades from 5 volts down to 3.3 volts or lower.
 
