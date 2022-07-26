@@ -30,7 +30,7 @@ ADC would be familiar to Arduino users as the ```analogRead()``` function. The A
 The relevant point here is that the choice of reference voltage determines the result of both the Analog Comparator and the ADC hardware.
 
 ## How Battery Voltage Affects Analog Input
-The main power supply to the chip, *Vcc*, is the default choice of reference voltage for analog comparison purposes. It should be obvious that bettery voltage cannot supply a stable reference. 
+The main power supply to the chip, *Vcc*, is the default choice of reference voltage for analog comparison purposes. It should be obvious that battery voltage cannot supply a stable reference. 
 
 I say, "It should be obvious..." Of course, silly me, I overlooked this effect in early prototypes of the Soil Sentinel. As a result of decreasing battery voltage, the Sentinel reported "dry soil" at progressively increasing levels of soil moisture.
 
@@ -50,9 +50,14 @@ But wait. My reference voltage is only 1.1, more or less. I need to reduce the o
 
 A 2 megaOhm potentiometer can serve as a convenient, adjustable voltage divider for this purpose. Feed the output of the sensor into the potentiometer. Evaluate the voltage emerging from the wiper. See the schematic, below.
 
-![Schematic using bandgap voltage](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/main/images/schematic_Vbg.png)
+![Schematic using bandgap voltage](https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/gh-pages/images/schematic_Vbg.png)
 
 Why such a large resistance value, 2 megaOhms, for the potentiometer? Because the current from the sensor is very small and potentiometers are resistors that drop voltage when current is held constant. For example, a 20 K&Omega; potentiometer cuts the sensor's measurable voltage output in half *before* the wiper further divides it. The 2 M&Omega; pot drops almost no voltage.
+
+## Better than Battery
+The internal bandgap reference voltage does not change enough to affect analog input, even as the battery voltage supplying the chip fades from 5 volts down to 3.3 volts or lower.
+
+I believe that using <span>V<sub>BG</sub></span> as the voltage reference gives a more consistent "dry soil" indication from the Soil Sentinel.
 
 ## Playfulness
 I learn this stuff on my own by a combination of reading and playful tinkering. It's important to stay in the playful space where it's fun when things don't work. I forget that sometimes and start calling myself stupid. 
