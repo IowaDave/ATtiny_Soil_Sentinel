@@ -50,10 +50,7 @@ But wait. My reference voltage is only 1.1, more or less. I need to reduce the o
 
 A 2 megaOhm potentiometer can serve as a convenient, adjustable voltage divider for this purpose. Feed the output of the sensor into the potentiometer. Evaluate the voltage emerging from the wiper. See the schematic, below.
 
-<img 
-     src="https://github.com/IowaDave/ATtiny_Soil_Sentinel/blob/gh-pages/images/schematic_Vbg.png"
-     alt="Schematic Using Bandgap Voltage"
-     >
+![Schematic]({{site.baseurl}}images/schematic_Vbg.png)
 
 Why such a large resistance value, 2 megaOhms, for the potentiometer? Because the current from the sensor is very small and potentiometers are resistors that drop voltage when current is held constant. For example, a 20 K&Omega; potentiometer cuts the sensor's measurable voltage output in half *before* the wiper further divides it. The 2 M&Omega; pot drops almost no voltage.
 
